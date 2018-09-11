@@ -37,6 +37,7 @@
                 axios.get('http://localhost:3005/api/commit',{
                     params : {
                         id : this.$route.params.id,
+                        username : this.$store.state.currentUser[0].username,
                         content : this.commentvalue//请求的参数：评论的内容
                     }
                 }).then(({data})=>{

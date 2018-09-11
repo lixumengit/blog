@@ -6,11 +6,11 @@
       <register v-if="$route.name === 'Register'"></register>
       <div class="content clearfix" v-if="$route.name != 'Register'">
         <!-- 左边的文章列表 -->
-        <div v-show="!($route.matched.some(item=> item.path === '/admin'))" class="left-content">
+        <div v-show="!($route.matched.some(item=> item.path === '/admin'))" class="left-content" :style="{width : $route.name ==='Login' ? '100%' : '68%'}">
           <router-view/>
         </div>
         <!-- 右边的一些导航 -->
-        <div v-show="!($route.matched.some(item=> item.path === '/admin'))" class="right-content">
+        <div v-show="!(($route.matched.some(item=> item.path === '/admin')) || $route.name ==='Login')" class="right-content">
           <!-- 公告 -->
           <div class="newsItem">
             <h3 class="catListTitle">个人资料</h3>
@@ -78,7 +78,6 @@ export default {
     }
   },
   created() {
-    
   }
   
 }
