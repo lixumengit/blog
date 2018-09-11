@@ -14,11 +14,13 @@ let navConfig = [
     {
         title : '人工智能',
         name : 'Ai'
-    },
-    {
-        title : '新随笔',
-        name : 'Suibi'
     }
+    //写文章的路由
+    // ,
+    // {
+    //     title : '写文章',
+    //     name : 'Suibi'
+    // }
 ];
 
 export default navConfig;

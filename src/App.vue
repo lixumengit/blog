@@ -13,10 +13,10 @@
         <div v-show="!($route.matched.some(item=> item.path === '/admin'))" class="right-content">
           <!-- 公告 -->
           <div class="newsItem">
-            <h3 class="catListTitle">公告</h3>
+            <h3 class="catListTitle">个人资料</h3>
               <div id="blog-news">
                 <div id="profile_block">
-                  昵称：<span>lixumeng</span><br>
+                  昵称：<span>{{$store.state.currentUser.length ? $store.state.currentUser[0].username : 'lixumeng'}}</span><br>
                   博龄：<span title="入园时间：2013-11-01">4年10个月</span><br>
                   粉丝：<span>38</span><br>
                   关注：<span>2</span>
